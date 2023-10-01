@@ -7,20 +7,29 @@ export default function App() {
     <View style={styles.container}>
 
       <View style={styles.eye}>
-        <Image style={styles.eyeImg} source={require('/img/eye1.png')}  ></Image>
+        <Image style={styles.eyeImg} source={require('/img/eye2.png')}  ></Image>
       </View>
       <View style={styles.form}>
-        <TextInput style={styles.textInput} placeholder='Name'></TextInput>
+        <TextInput style={styles.textInput} placeholder='Please input user name'></TextInput>
         <Image style={styles.image1} source={require('/img/user.png')}></Image>
-        <TextInput style={styles.textInput} placeholder='Password'></TextInput>
+        <TextInput style={styles.textInput} placeholder='Please input password'></TextInput>
         <Image style={styles.image2} source={require('/img/lock.png')}></Image>
-        <Image style={styles.image0} source={require('/img/eye.png')}></Image>
       </View>
       <br></br><br></br>
       <TouchableOpacity><button style={styles.button}>LOGIN</button></TouchableOpacity>
-      <View>
+      <View style={styles.textRow}>
         <br></br>
-        <h3 style={styles.text}>CREATE ACCOUNT</h3>
+        <a href='#' style={styles.a1}>Register</a>
+        <a href='#' style={styles.a2}>Forgot Password</a>
+      </View>
+      <View style={styles.text}>
+        <br></br>
+        <p style={styles.textLine}>Other Login Methods</p>
+      </View>
+      <View style={styles.buttonRow}>
+        <button  style={styles.button1} ></button>
+        <button  style={styles.button1} ></button>
+        <button  style={styles.button1} ></button>
       </View>
 
 
@@ -38,27 +47,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   eye: {
+
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 'auto',
-    height: '150px',
-    width: '150px',
+    height: '30%',
+    width: '100%',
   },
   eyeImg: {
     width: '150px',
     height: '150px',
-    position: 'absolute'
+    position: 'absolute',
+    justifyContent:'center'
   },
-  image0: {
-    width: 36,
-    height: 36,
-    // position: 'absolute',
-    marginLeft: 310,
-    marginTop: -60,
-    marginBottom: 25,
 
-  },
   image1: {
     width: 36,
     height: 36,
@@ -80,29 +82,75 @@ const styles = StyleSheet.create({
   textInput: {
     width: 330,
     height: 54,
-    backgroundColor: '#dcbc3b',
     margin: 'auto',
     marginBottom: 15,
     fontSize: 20,
-    paddingLeft: 50,
+    paddingLeft: '15%',
+    borderBottomColor:'#bbb',
+    borderBottomWidth:1,
+    color:'#bbb'
   },
   button: {
     width: 330,
     height: 54,
-    backgroundColor: '#000',
+    backgroundColor: '#386ffc',
     margin: 'auto',
-    marginTop: 30,
     border: 0,
     fontSize: 25,
-    fontWeight: '550',
-    color: '#fff'
-  },
-  text: {
-    textAlign: 'center',
-    fontFamily: 'sans-serif',
-
+    fontWeight: '350',
+    color: '#fff',
+    borderRadius:10,
   },
 
+  textRow:{
+    display:'flex',
+    justifyContent:'space-around',
+    flexDirection:'row',
+    backgroundColor:'#bbb',
+    width:'100%',
+    marginTop:'8%',
+  },
+  a1:{
+    textDecorationLine:'none',
+    color:'#000',
+    fontSize:20,
+    fontWeight:520,
+    fontFamily:'sans-serif',
+    backgroundColor:'#fff',
+    width:'50%',
+    paddingLeft:'10%',
+  },
+  a2:{
+    textDecorationLine:'none',
+    color:'#000',
+    fontSize:20,
+    fontWeight:520,
+    fontFamily:'sans-serif',
+    backgroundColor:'#fff',
+    width:'50%',
+    paddingRight:'5%',
+  },
+  textLine:{
+    fontSize:20,
+    fontWeight:300,
+    fontFamily:'sans-serif',
+    textAlign:'center'
+  },
+  text:{
+    
+  },
+
+  buttonRow:{
+    display:'flex',
+    justifyContent:'space-around',
+    flexDirection:'row'
+  },
+  button1:{
+    width:75,
+    height:75,
+    borderColor:'#bbb',
+    borderWidth:1,
+  },
 
 
 
